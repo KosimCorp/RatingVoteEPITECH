@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" fillWidth="false" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="401.0" styleClass="root" stylesheets="@../css/pengaturan.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kosim.app.controller.PengaturanController">
+   <children>
+      <HBox prefHeight="150.0" prefWidth="401.0">
+         <children>
+            <GridPane alignment="CENTER" hgap="10.0" maxWidth="1.7976931348623157E308" style="-fx-background-color: #fff;" vgap="10.0" HBox.hgrow="SOMETIMES">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <Label text="IP" />
+                  <Label text="Port" GridPane.rowIndex="1" />
+                  <Label text=":" GridPane.columnIndex="1" />
+                  <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="txtIp" editable="false" labelFloat="true" promptText="IP Anda" GridPane.columnIndex="2" />
+                  <JFXTextField fx:id="txtPort" labelFloat="true" promptText="Masukan Port" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btnKoneksi" maxWidth="1.7976931348623157E308" styleClass="btn-buat" text="Buat Koneksi" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

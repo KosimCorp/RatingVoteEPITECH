@@ -1,0 +1,25 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.root {
+    -fx-background-color: white;
+}
+
+.btn-tambah {
+    -fx-background-color:#217efc;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 19;
+}
+
+.table {
+    
+}
+
+.btn-ce {
+    -fx-background-color: #0e74c8;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 19;
+}

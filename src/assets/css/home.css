@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.root {
+    -fx-background-color: white;
+}
+
+.lbl-top {
+    -fx-background-color: #144383;
+    -fx-text-fill: white;
+}
+
+.btn-generate {
+    -fx-padding: 10;
+    -fx-background-color: #006cff;
+    -fx-text-fill: white;
+    -fx-font-size: 19;
+    -fx-cursor: hand;
+}

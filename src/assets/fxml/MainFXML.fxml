@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox fx:id="root" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kosim.app.controller.MainController">
+   <children>
+      <VBox fx:id="sidebar" prefHeight="600.0" prefWidth="400.0" styleClass="sidebar">
+         <children>
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Panel Admin" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="25.0" />
+               </font>
+            </Label>
+            <Separator />
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="btnHome" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" ripplerFill="#073a51" styleClass="btn" text="Home" />
+                  <JFXButton fx:id="btnKelolaTeam" maxWidth="1.7976931348623157E308" ripplerFill="#073a51" styleClass="btn" text="Kelola Team" />
+                  <JFXButton fx:id="btnPengaturan" layoutX="10.0" layoutY="57.0" maxWidth="1.7976931348623157E308" ripplerFill="#073a51" styleClass="btn" text="Pengaturan" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+      <ScrollPane fx:id="container" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" HBox.hgrow="ALWAYS" />
+   </children>
+</HBox>

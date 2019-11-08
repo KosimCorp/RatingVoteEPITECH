@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@../css/kelolateam.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kosim.app.controller.KelolaTeamController">
+   <children>
+      <TableView fx:id="tableTeam" styleClass="table" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="columnNama" editable="false" prefWidth="75.0" text="Nama Team" />
+          <TableColumn fx:id="columnKandidat" editable="false" prefWidth="75.0" text="Jumlah Kandidat" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox spacing="10.0">
+         <children>
+            <JFXButton fx:id="btnTambah" styleClass="btn-tambah" text="Tambah" />
+            <JFXButton fx:id="btnEdit" layoutX="20.0" layoutY="20.0" styleClass="btn-tambah" text="Edit" />
+            <JFXButton fx:id="btnHapus" layoutX="114.0" layoutY="20.0" styleClass="btn-tambah" text="Hapus" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

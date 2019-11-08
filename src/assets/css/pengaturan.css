@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.root {
+    -fx-background-color: white;
+}
+
+.btn-buat {
+    -fx-background-color: #075799;
+    -fx-cursor: hand;
+    -fx-padding: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+}

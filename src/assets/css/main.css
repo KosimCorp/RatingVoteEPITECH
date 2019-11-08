@@ -1,0 +1,33 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.root {
+    -fx-background-color: white;
+}
+
+.sidebar {
+    -fx-background-color: #0b4f6d
+}
+
+.sidebar .btn {
+    -fx-background-color: #0b4f6d;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10;
+    -fx-font-size: 18;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+
+.sidebar .btn-out {
+    -fx-background-color: #09508b;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10;
+    -fx-font-size: 18;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+
+.sidebar .btn:hover {
+    
+}
