@@ -44,20 +44,23 @@ public class SimpleQuery {
     public static int coblos(String code, int idTeam, int rating) throws SQLException {
         ResultSet rs = Client.getConnection().createStatement().executeQuery("SELECT id_token FROM tbl_token WHERE token = '" + code + "'");
         
-        if (login(code) == 0) {
-            return 0;
+        int loginStatus = login(code);
+        if (loginStatus != 1) {
+            return loginStatus;
         }
         
         if (rs.next()) {
-            Client.getConnection().createStatement().executeUpdate("UPDATE tbl_token SET terpakai = 1 AND token = '" + code + "'");
+            if (Client.getConnection().createStatement().executeUpdate("UPDATE tbl_token SET terpakai = 1 AND token = '" + code + "'") > 0) {
+                PreparedStatement ps = Client.getConnection().prepareStatement("INSERT INTO tbl_vote VALUES (null, ?, ?, ?)");
             
-            PreparedStatement ps = Client.getConnection().prepareStatement("INSERT INTO tbl_vote VALUES (null, ?, ?, ?)");
+                ps.setInt(1, rs.getInt("id_token"));
+                ps.setInt(2, idTeam);
+                ps.setInt(3, rating);
+
+                return ps.executeUpdate() > 0 ? 1 : 0;
+            }
             
-            ps.setInt(1, rs.getInt("id_token"));
-            ps.setInt(2, idTeam);
-            ps.setInt(3, rating);
-            
-            return ps.executeUpdate() > 0 ? 1 : 0;
+            return 0;
         }
         
         return 2;
