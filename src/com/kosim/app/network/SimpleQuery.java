@@ -50,7 +50,7 @@ public class SimpleQuery {
         }
         
         if (rs.next()) {
-            if (Client.getConnection().createStatement().executeUpdate("UPDATE tbl_token SET terpakai = 1 AND token = '" + code + "'") > 0) {
+            if (Client.getConnection().createStatement().executeUpdate("UPDATE tbl_token SET terpakai = 1 WHERE token = '" + code + "'") > 0) {
                 PreparedStatement ps = Client.getConnection().prepareStatement("INSERT INTO tbl_vote VALUES (null, ?, ?, ?)");
             
                 ps.setInt(1, rs.getInt("id_token"));
@@ -166,7 +166,8 @@ public class SimpleQuery {
         ResultSet rs = Client.getConnection().createStatement().executeQuery("SELECT terpakai FROM tbl_token WHERE token = '" + token + "'");
         
         if (rs.next()) {
-            return rs.getBoolean("terpakai") ? 2 : 1;
+            System.out.println("Terpakai : " + rs.getInt("terpakai"));
+            return rs.getInt("terpakai") == 1 ? 2 : 1;
         }
         
         return 0;
