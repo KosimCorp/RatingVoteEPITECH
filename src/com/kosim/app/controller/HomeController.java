@@ -136,7 +136,7 @@ public class HomeController implements Initializable {
 //            }
 //        });
         
-        refresh();
+//        refresh();
         
         Global.clientListener.add((BiConsumer<String, User>) (String t, User u) -> {
             if (t.startsWith("coblos"))
@@ -151,6 +151,8 @@ public class HomeController implements Initializable {
 //                    container.getChildren().add(1, sideright);
 //            }
 //        });
+
+        root.setUserData(this);
     }    
     
     public void refresh() {
