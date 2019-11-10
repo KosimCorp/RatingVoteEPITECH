@@ -128,6 +128,8 @@ public class Global {
                             try {
                                 String result = "login-" + SimpleQuery.login(input[1]);
                                 
+                                System.out.println(input[1]);
+                                
                                 user.getOutput().writeObject(result);
                             } catch (Exception ex) {
                                 DialogHelper.showAlert(Main.primaryStage, "Error", ex.getMessage());
@@ -173,6 +175,8 @@ public class Global {
                                 int result = SimpleQuery.coblos(input[1], idteam, rating);
                                 
                                 String data = "coblos-" + result;
+                                
+                                System.out.println(input[1]);
                                 
                                 user.getOutput().writeObject(data);
                             } catch (Exception ex) {
